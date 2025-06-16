@@ -1,0 +1,64 @@
+{
+  "name": "@andrebuzeli/mcp-rules-enforcer-zero",
+  "version": "1.0.10",
+  "description": "MCP server that automatically enforces rules from markdown files for AI agents (zero-tool version)",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-rules-enforcer-zero": "dist/index.js"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "rules",
+    "automation",
+    "vscode",
+    "cursor",
+    "claude",
+    "copilot",
+    "zero-tool"
+  ],
+  "author": "Andre Buzeli",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andre-Buzeli/mcp-rules-enforcer-zero.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Andre-Buzeli/mcp-rules-enforcer-zero/issues"
+  },
+  "homepage": "https://github.com/Andre-Buzeli/mcp-rules-enforcer-zero#readme",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch --clear-screen=false src/index.ts",
+    "start": "node dist/index.js",
+    "test": "echo \"No tests specified\"",
+    "lint": "eslint src/",
+    "format": "prettier --write src/",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.4",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
